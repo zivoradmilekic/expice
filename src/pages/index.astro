@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/main.astro";
+
+// Component Imports
+import Button from "../components/Button.astro";
+---
+
+<Layout content={{ title: "Astro + Tailwind" }}>
+  <div class="grid place-items-center h-screen content-center">
+    <Button>Tailwind Button in Astro!</Button>
+    <a href="/markdown-page" class="p-4 underline"
+      >Markdown is also supported...</a
+    >
+  </div>
+</Layout>
