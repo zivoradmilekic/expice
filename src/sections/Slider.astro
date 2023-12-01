@@ -1,0 +1,64 @@
+---
+import Dots from "../icons/Dots.astro";
+
+import Location from "../components/Location.astro";
+import SliderNav from "../components/SliderNav.astro";
+---
+
+<section
+  style="background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 66%, #FE043C 66%, #FE043C 100%); padding: 250px 0 100px;"
+>
+  <div class="container mx-auto grid grid-cols-[1.1fr_0.9fr]">
+    <div class="">
+      <div
+        class="opacity-5 text-indigo-900 text-[200px] leading-none font-black capitalize"
+      >
+        Food
+      </div>
+
+      <div class="text-indigo-900 text-7xl font-bold capitalize leading-[90px]">
+        Discover Restaurant<br />& Delicious Food
+      </div>
+
+      <div class="relative inline-flex mt-10">
+        <div class="w-[670px] h-[90px] bg-white">
+          <div
+            class="w-[222px] h-[18px] left-[50px] top-[36px] absolute opacity-60 text-indigo-900 text-lg font-normal leading-none capitalize"
+          >
+            search restaurant, food
+          </div>
+        </div>
+        <button
+          class="w-[200px] h-[72px] left-[461px] top-[9px] absolute bg-rose-600 rounded-tl-[60px] flex justify-center items-center"
+        >
+          <span
+            class="font-semibold leading-none text-3xl text-white uppercase"
+          >
+            go
+          </span>
+        </button>
+      </div>
+
+      <div class=" mt-32 absolute left-0">
+        <Location />
+      </div>
+    </div>
+
+    <div class="flex flex-col items-end">
+      <div class="relative flex justify-center">
+        <Dots class="absolute left-0 bottom-0" />
+
+        <img
+          class="absolute -top-60"
+          src="/images/ae617c591be597dfa703ef346d25f3fe.png"
+        />
+        <img
+          class="relative"
+          src="/images/74c83c01c8ac904ba019b492bfb35c6c.png"
+        />
+      </div>
+
+      <SliderNav />
+    </div>
+  </div>
+</section>

@@ -1,15 +1,40 @@
 ---
 import Layout from "../layouts/main.astro";
 
+import Slider from "../sections/Slider.astro";
+
+import Dots from "../icons/Dots.astro";
 // Component Imports
-import Button from "../components/Button.astro";
+import Logo from "../components/Logo.astro";
+import UserPanel from "../components/UserPanel.astro";
 ---
 
 <Layout content={{ title: "Astro + Tailwind" }}>
-  <div class="grid place-items-center h-screen content-center">
-    <Button>Tailwind Button in Astro!</Button>
-    <a href="/markdown-page" class="p-4 underline"
-      >Markdown is also supported...</a
+  <header class="absolute top-0 w-full">
+    <div
+      class="container mx-auto items-center justify-between grid grid-cols-[1fr_auto_1fr]"
     >
-  </div>
+      <Logo />
+
+      <nav class="flex items-center gap-[40px]">
+        <a href="#" class="text-indigo-900 text-base font-normal leading-none"
+          >Menu One</a
+        >
+        <a href="#" class="text-indigo-900 text-base font-normal leading-none"
+          >Menu Two</a
+        >
+        <a href="#" class="text-indigo-900 text-base font-normal leading-none"
+          >Menu Three</a
+        >
+        <a href="#" class="text-indigo-900 text-base font-normal leading-none"
+          >Menu Four</a
+        >
+      </nav>
+
+      <div class="flex justify-end">
+        <UserPanel />
+      </div>
+    </div>
+  </header>
+  <Slider />
 </Layout>
